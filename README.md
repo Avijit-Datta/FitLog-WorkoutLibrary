@@ -14,7 +14,7 @@ lets you **plan today’s workouts**, **save favorites**, and keeps everything p
 [![React Router](https://img.shields.io/badge/React_Router-v6-CA4245?logo=reactrouter&logoColor=white)](https://reactrouter.com/)
 [![React Toastify](https://img.shields.io/badge/React--Toastify-Toasts-FFCC00)](https://fkhadra.github.io/react-toastify/)
 
-🔗 [**Live Demo**](https://YOUR_PROJECT.vercel.app) &nbsp;•&nbsp; 📦 [**Repository**](https://github.com/YOUR_USERNAME/fitlog)
+🔗 [**Live Demo**](https://fitlog-workout-library-mu.vercel.app/) &nbsp;•&nbsp; 📦 [**Repository**](https://github.com/Avijit-Datta/FitLog-WorkoutLibrary)
 
 </div>
 

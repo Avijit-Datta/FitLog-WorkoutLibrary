@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useWorkouts } from "../hooks/useWorkouts";
 import WorkoutCard from "../components/WorkoutCard";
+import bannerImage from "../assets/banner.png";
 
 const DIFFICULTIES = ["All", "Beginner", "Intermediate", "Advanced"];
 const SORT_OPTIONS = [
@@ -56,31 +57,61 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-950">
+
+      {/* ── HERO SECTION ── */}
       <section className="relative overflow-hidden border-b border-white/10 bg-gray-950 py-20 sm:py-28">
         <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full blur-3xl opacity-20" style={{ background: "radial-gradient(circle,#28BDB4,#6388D2,#9B3DDA)" }} />
+          <div
+            className="absolute -top-32 left-1/2 h-96 w-96 -translate-x-1/2 rounded-full blur-3xl opacity-20"
+            style={{ background: "radial-gradient(circle,#28BDB4,#6388D2,#9B3DDA)" }}
+          />
         </div>
-        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-gray-400">
-            WORKOUT LIBRARY
-          </p>
-          <h1 className="mb-4 text-4xl font-black uppercase leading-tight sm:text-6xl" style={{ background: "linear-gradient(90deg,#28BDB4,#6388D2,#9B3DDA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-            TRAIN WITH PURPOSE
-          </h1>
-          <p className="mx-auto mb-8 max-w-xl text-base text-gray-400 sm:text-lg">
-            A no-nonsense gym companion. Pick a lift, build your daily plan, and watch the week's progress add up.
-          </p>
-          <a
-            href="#library"
-            className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:opacity-90 hover:scale-105"
-            style={{ background: "linear-gradient(90deg,#28BDB4,#6388D2,#9B3DDA)" }}
-          >
-            <span>💪</span>
-            BROWSE WORKOUTS
-          </a>
+        <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+
+            {/* ─ LEFT COLUMN — text content ─ */}
+            <div className="text-center lg:text-left">
+              <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-gray-400">
+                WORKOUT LIBRARY
+              </p>
+              <h1
+                className="mb-4 text-4xl font-black uppercase leading-tight sm:text-6xl"
+                style={{
+                  background: "linear-gradient(90deg,#28BDB4,#6388D2,#9B3DDA)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                TRAIN WITH PURPOSE
+              </h1>
+              <p className="mx-auto mb-8 max-w-xl text-base text-gray-400 sm:text-lg lg:mx-0">
+                A no-nonsense gym companion. Pick a lift, build your daily plan,
+                and watch the week's progress add up.
+              </p>
+              <a
+                href="#library"
+                className="inline-flex items-center gap-2 rounded-xl px-8 py-3.5 text-sm font-bold text-white shadow-lg transition-all hover:opacity-90 hover:scale-105"
+                style={{ background: "linear-gradient(90deg,#28BDB4,#6388D2,#9B3DDA)" }}
+              >
+                <span>💪</span>
+                BROWSE WORKOUTS
+              </a>
+            </div>
+
+            {/* ── RIGHT COLUMN — banner image ── */}
+            <div className="flex items-center justify-center lg:justify-end">
+              <img
+                src={bannerImage}
+                alt="Workout banner"
+                className="w-full max-w-sm rounded-2xl object-cover drop-shadow-2xl lg:max-w-md"
+              />
+            </div>
+
+          </div>
         </div>
       </section>
 
+      {/* ── LIBRARY SECTION ── */}
       <section id="library" className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
         <div className="mb-8">
           <h2 className="mb-1 text-2xl font-bold text-white">THE LIBRARY</h2>

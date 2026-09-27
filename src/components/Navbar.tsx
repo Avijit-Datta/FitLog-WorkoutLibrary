@@ -1,5 +1,6 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { usePlan } from "../context/PlanContext";
+import logoImage from "../assets/logo.png";
 
 export default function Navbar() {
   const { plan, saved } = usePlan();
@@ -9,7 +10,21 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-gray-950/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-black tracking-tight" style={{ background: "linear-gradient(90deg,#28BDB4,#6388D2,#9B3DDA)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+          {/* Logo image */}
+          <img
+            src={logoImage}
+            alt="FitLog Logo"
+            className="h-8 w-8 object-contain"
+          />
+          {/* Logo text */}
+          <span
+            className="text-2xl font-black tracking-tight"
+            style={{
+              background: "linear-gradient(90deg,#28BDB4,#6388D2,#9B3DDA)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             FITLOG
           </span>
         </Link>
@@ -40,7 +55,10 @@ export default function Navbar() {
           >
             <span>Plan</span>
             {plan.length > 0 && (
-              <span className="flex h-5 min-w-[20px] items-center justify-center rounded-full px-1 text-xs font-bold text-white" style={{ background: "linear-gradient(90deg,#28BDB4,#6388D2)" }}>
+              <span
+                className="flex h-5 min-w-[20px] items-center justify-center rounded-full px-1 text-xs font-bold text-white"
+                style={{ background: "linear-gradient(90deg,#28BDB4,#6388D2)" }}
+              >
                 {plan.length}
               </span>
             )}
